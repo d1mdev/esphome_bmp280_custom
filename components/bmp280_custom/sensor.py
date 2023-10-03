@@ -16,7 +16,7 @@ from esphome.const import (
 
 DEPENDENCIES = ["i2c"]
 
-bmp280_ns = cg.esphome_ns.namespace("bmp280")
+bmp280_ns = cg.esphome_ns.namespace("bmp280_custom")
 BMP280Oversampling = bmp280_ns.enum("BMP280Oversampling")
 OVERSAMPLING_OPTIONS = {
     "NONE": BMP280Oversampling.BMP280_OVERSAMPLING_NONE,
@@ -37,7 +37,7 @@ IIR_FILTER_OPTIONS = {
 }
 
 BMP280Component = bmp280_ns.class_(
-    "BMP280Component", cg.PollingComponent, i2c.I2CDevice
+    "BMP280CustomComponent", cg.PollingComponent, i2c.I2CDevice
 )
 
 CONFIG_SCHEMA = (

@@ -5,7 +5,7 @@
 #include "esphome/components/i2c/i2c.h"
 
 namespace esphome {
-namespace bmp280 {
+namespace bmp280_custom {
 
 /// Internal struct storing the calibration values of an BMP280.
 struct BMP280CalibrationData {
@@ -51,7 +51,7 @@ enum BMP280IIRFilter {
 };
 
 /// This class implements support for the BMP280 Temperature+Pressure i2c sensor.
-class BMP280Component : public PollingComponent, public i2c::I2CDevice {
+class BMP280CustomComponent : public PollingComponent, public i2c::I2CDevice {
  public:
   void set_temperature_sensor(sensor::Sensor *temperature_sensor) { temperature_sensor_ = temperature_sensor; }
   void set_pressure_sensor(sensor::Sensor *pressure_sensor) { pressure_sensor_ = pressure_sensor; }
@@ -90,5 +90,5 @@ class BMP280Component : public PollingComponent, public i2c::I2CDevice {
   } error_code_{NONE};
 };
 
-}  // namespace bmp280
+}  // namespace bmp280_custom
 }  // namespace esphome
