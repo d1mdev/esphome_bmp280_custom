@@ -64,7 +64,7 @@ void BMP280CustomComponent::setup() {
     this->mark_failed();
     return;
   }
-  ESP_LOGD(TAG, "Chip id: %02X", chip_id);
+  ESP_LOGCONFIG(TAG, "Chip id: %02X", chip_id);
   if (chip_id != 0x58) {
     this->error_code_ = WRONG_CHIP_ID;
     this->mark_failed();
