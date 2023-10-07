@@ -256,7 +256,7 @@ void BMP280CustomComponent::set_pressure_oversampling(BMP280Oversampling pressur
   this->pressure_oversampling_ = pressure_over_sampling;
 }
 void BMP280CustomComponent::set_iir_filter(BMP280IIRFilter iir_filter) { this->iir_filter_ = iir_filter; }
-uint8_t BMP280Component::read_u8_(uint8_t a_register) {
+uint8_t BMP280CustomComponent::read_u8_(uint8_t a_register) {
   uint8_t data = 0;
   this->read_byte(a_register, &data);
   return data;
