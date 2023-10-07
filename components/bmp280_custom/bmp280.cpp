@@ -135,7 +135,7 @@ void BMP280CustomComponent::dump_config() {
     default:
       break;
   }
-  # Addded for test purposes. To remove after.
+  // Addded for test purposes. To remove after.
   uint8_t chip_id = 0;
   this->read_byte(0xD0, &chip_id);
   ESP_LOGCONFIG(TAG, "Chip id: %02X", chip_id);
