@@ -138,7 +138,7 @@ void BMP280CustomComponent::dump_config() {
   // Addded for test purposes. To remove after.
   uint8_t chip_id = 0;
   this->read_byte(0xD0, &chip_id);
-  ESP_LOGCONFIG(TAG, "Chip id: %02X", chip_id);
+  ESP_LOGCONFIG(TAG, "  Chip id: %02X", chip_id);
   
   ESP_LOGCONFIG(TAG, "  IIR Filter: %s", iir_filter_to_str(this->iir_filter_));
   LOG_UPDATE_INTERVAL(this);
